@@ -1,0 +1,19 @@
+version: "2"
+services:   
+    comp:
+      image: alpine
+      container_name: compppp
+      command: ping 8.8.8.8
+    
+    comp1:
+      image: ubuntu
+      container_name: cccccc
+      command: date
+     
+    comp2:
+      image: nginx:t2
+      build: .
+      container_name: cococococ
+      ports:
+        -  "3457:80"           
+
