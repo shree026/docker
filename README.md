@@ -56,7 +56,7 @@ sudo apt install docker-ce
 ### To start and enable docker service
 
 ```
-systemctl enable docker --now 
+systemctl enable --now docker
 
 ```
 
