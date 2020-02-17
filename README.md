@@ -3,8 +3,18 @@
 Docker is a platform for developing, shipping, and running applications .
 It is written in Go language.
 
-## Installation 
+### Versions of Docker
 
-``` root@jarvis:~# yum install docker -y ```
+--> Docker-io <br>
+--> Docker-ce <br>
+--> Docker-ee <br>
+
+
+## Installation in redhat 
+
+``` 
+root@jarvis:~# yum install docker -y 
+
+```
 
 
