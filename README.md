@@ -25,8 +25,14 @@ f6df9d606def        host                host                local
   <li>Host</li>
   <li>Macvlan</li>
   <li>Overlay</li>
-  <li>Null<li>
+  <li>Null</li>
 </ul>
+
+## Bridge Network
+
+Bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, while providing isolation from containers which are not connected to that bridge network.
+[Learn More About Bridge Network](https://docs.docker.com/network/bridge/)
+
 
 ### To create a bridge driver network
 
@@ -73,4 +79,28 @@ force@Awakens:~$ docker inspect my-net
 
 
 ```
+
+### Create a network with ip-range
+
+```
+
+force@Awakens:~$ docker network create --ip-range 192.168.10.0/24 --subnet 192.168.10.0/16 network
+afac9db9fa60d558d1b215067b7c60ce2ff8019af141e807f8855fb96b732102
+
+
+```
+
+### Create container with different network 
+
+```
+
+force@Awakens:~$ docker run -itd --name net --restart always --network network alpine sh 
+4845901632b61618ad80a55da1584088b2f3452efe9f84d91945c491e352e632
+
+```
+
+## Overlay Networks
+
+It operates across an entire Swarm or UCP cluster rather than individual hosts.
+
 
