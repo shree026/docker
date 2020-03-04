@@ -99,8 +99,19 @@ force@Awakens:~$ docker run -itd --name net --restart always --network network a
 
 ```
 
-## Overlay Networks
+## Overlay Network
 
 It operates across an entire Swarm or UCP cluster rather than individual hosts.
 
 
+### To create overlay network 
+
+```
+force@Awakens:~$ docker network create --driver overlay  --ip-range 168.193.1.0/24 --subnet 168.193.1.0/16 overlaynet
+62c91839183aa398815bf32927a4c9b9e142ca3287ef1daa768e718d0129d127
+
+```
+
+## Macvlan Network 
+
+It connects container interfaces directly to host interfaces.
